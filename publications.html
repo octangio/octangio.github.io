@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <!-- SITE TITTLE -->
@@ -7,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OCTAngio - Publications</title>
-  
+
   <!-- PLUGINS CSS STYLE -->
   <!-- Bootstrap -->
   <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,323 +25,314 @@
   <!-- FAVICON -->
   <link href="images/favicon.png" rel="shortcut icon">
 
+  <!-- publications -->
+
+  <bibtex src="data/publications.bib"></bibtex>
+
+
+
+  <style>
+    h1 {
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 50px;
+    }
+
+    bibtex {
+      display: none;
+    }
+
+    .searchbar {
+      margin-left: 0px;
+    }
+
+    #bibtex_errors {
+      margin-top: 10px;
+      color: red;
+    }
+
+    h1.header {
+      margin-left: 8px;
+    }
+
+    h1.YEAR {
+      font-size: 22px;
+      font-weight: bold;
+      display: inline;
+      margin-left: 8px;
+    }
+  </style>
+
+
 </head>
 
 <body class="body-wrapper">
 
 
-<!--========================================
+  <!--========================================
 =            Navigation Section            =
 =========================================-->
 
-<nav class="navbar main-nav border-less fixed-top navbar-expand-lg p-0">
-	<div class="container-fluid p-0">
-		<!-- logo -->
-		<a class="navbar-brand" href="index.html">
-		  <img src="images/logo.png" alt="logo">
-		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="fa fa-bars"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-		<ul class="navbar-nav mx-auto">
-		  <li class="nav-item dropdown active dropdown-slide">
-			<a class="nav-link" href="index.html">Home
-			  <span>/</span>
-			</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="publications.html">Publications
-			  <span>/</span>
-			</a>
-		  </li>
-		  <li class="nav-item">
-			  <a class="nav-link" href="dataset-software.html">Dataset - Software
-			  </a>
-		  </li>
-		</ul>
-		<a href="contact.html" class="ticket">
-		  <img src="images/icon/email.png" alt="email">
-		  <span>Contact us</span>
-		</a>
-		</div>
-	</div>
+  <nav class="navbar main-nav border-less fixed-top navbar-expand-lg p-0">
+    <div class="container-fluid p-0">
+      <!-- logo -->
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fa fa-bars"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item dropdown active dropdown-slide">
+            <a class="nav-link" href="index.html">Home
+              <span>/</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="publications.html">Publications
+              <span>/</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dataset-software.html">Dataset - Software
+            </a>
+          </li>
+        </ul>
+        <a href="contact.html" class="ticket">
+          <img src="images/icon/email.png" alt="email">
+          <span>Contact us</span>
+        </a>
+      </div>
+    </div>
   </nav>
-  
+  <a name="top"></a>
   <!--====  End of Navigation Section  ====-->
-  
 
 
 
-<!--================================
+
+  <!--================================
 =            Page Title            =
 =================================-->
 
-<section class="page-title bg-title overlay-dark">
-	<div class="container">
-		<div class="row">
-			<div class="col-12 text-center">
-				<div class="title">
-					<h3>Publications</h3>
-				</div>
-				<ol class="breadcrumb p-0 m-0">
-				  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-				  <li class="breadcrumb-item active">Publications</li>
-				</ol>
-			</div>
-		</div>
-	</div>
-</section>
+  <section class="page-title bg-title overlay-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="title">
+            <h3>Publications</h3>
+          </div>
+          <ol class="breadcrumb p-0 m-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">Publications</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!--====  End of Page Title  ====-->
+  <!--====  End of Page Title  ====-->
 
 
-<!--==============================
-=            Speakers            =
+  <!--==============================
+=            Publications            =
 ===============================-->
+            <!-- <div style="float:left;">
+              <select id="topicselect" class="btn bibtex_search" style="border: 1px solid lightgrey;">
+                <option value="">Search Topic</option>
+                <option value="OCT">OCT</option>
+              </select>
+            </div> -->
+  <section class="section speakers white">
+    <div class="container">
+      <div class="row">
+        
+        <div class="container-fluid">
+          <div class="searchbar">
+            <div style="float:left;">
+              <button type="button" class="btn btn-default" onclick="reset()">Reset</button>
+            </div>
+            <div style="float:left;">
+              <select id="authorselectfirst" class="btn bibtex_search bibtex_generate_author"
+                style="border: 1px solid lightgrey;" extra="first" search="author">
+                <option value="">Search First Author</option>
+              </select>
+            </div>
+            <div style="float:left;">
+              <select id="authorselect" class="btn bibtex_search bibtex_generate_author"
+                style="border: 1px solid lightgrey;" search="author">
+                <option value="">Search Author</option>
+              </select>
+            </div>
 
-<section class="section speakers white">
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<!-- Section Title -->
-				<div class="section-title">
-					<h3>Who <span class="alternate">Speaking?</span></h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusm tempor incididunt ut labore</p>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-3 col-md-4 col-sm-6">
-				<!-- Speaker 1 -->
-				<div class="speaker-item">
-					<div class="image">
-						<img src="images/speakers/speaker-one.jpg" alt="speaker" class="img-fluid">
-						<div class="primary-overlay"></div>
-						<div class="socials">
-							<ul class="list-inline">
-								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="content text-center">
-						<h5><a href="single-speaker.html">Johnathan Franco</a></h5>
-						<p>Project Manager</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6">
-				<!-- Speaker 2 -->
-				<div class="speaker-item">
-					<div class="image">
-						<img src="images/speakers/speaker-two.jpg" alt="speaker" class="img-fluid">
-						<div class="primary-overlay"></div>
-						<div class="socials">
-							<ul class="list-inline">
-								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="content text-center">
-						<h5><a href="single-speaker.html">Johnathan Franco</a></h5>
-						<p>Project Manager</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6">
-				<!-- Speaker 3 -->
-				<div class="speaker-item">
-					<div class="image">
-						<img src="images/speakers/speaker-three.jpg" alt="speaker" class="img-fluid">
-						<div class="primary-overlay"></div>
-						<div class="socials">
-							<ul class="list-inline">
-								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="content text-center">
-						<h5><a href="single-speaker.html">Johnathan Franco</a></h5>
-						<p>Project Manager</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6">
-				<!-- Speaker 4 -->
-				<div class="speaker-item">
-					<div class="image">
-						<img src="images/speakers/speaker-four.jpg" alt="speaker" class="img-fluid">
-						<div class="primary-overlay"></div>
-						<div class="socials">
-							<ul class="list-inline">
-								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="content text-center">
-						<h5><a href="single-speaker.html">Johnathan Franco</a></h5>
-						<p>Project Manager</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6">
-				<!-- Speaker 5 -->
-				<div class="speaker-item">
-					<div class="image">
-						<img src="images/speakers/speaker-five.jpg" alt="speaker" class="img-fluid">
-						<div class="primary-overlay"></div>
-						<div class="socials">
-							<ul class="list-inline">
-								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="content text-center">
-						<h5><a href="single-speaker.html">Johnathan Franco</a></h5>
-						<p>Project Manager</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6">
-				<!-- Speaker 1 -->
-				<div class="speaker-item">
-					<div class="image">
-						<img src="images/speakers/speaker-six.jpg" alt="speaker" class="img-fluid">
-						<div class="primary-overlay"></div>
-						<div class="socials">
-							<ul class="list-inline">
-								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="content text-center">
-						<h5><a href="single-speaker.html">Johnathan Franco</a></h5>
-						<p>Project Manager</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6">
-				<!-- Speaker 7 -->
-				<div class="speaker-item">
-					<div class="image">
-						<img src="images/speakers/speaker-five.jpg" alt="speaker" class="img-fluid">
-						<div class="primary-overlay"></div>
-						<div class="socials">
-							<ul class="list-inline">
-								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="content text-center">
-						<h5><a href="single-speaker.html">Johnathan Franco</a></h5>
-						<p>Project Manager</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6">
-				<!-- Speaker 8 -->
-				<div class="speaker-item">
-					<div class="image">
-						<img src="images/speakers/speaker-six.jpg" alt="speaker" class="img-fluid">
-						<div class="primary-overlay"></div>
-						<div class="socials">
-							<ul class="list-inline">
-								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="content text-center">
-						<h5><a href="single-speaker.html">Johnathan Franco</a></h5>
-						<p>Project Manager</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+            <div style="float:left;">
+              <input type="text" class="bibtex_search form-control" id="searchbar" placeholder="Search publications">
+              <span class="help-block" style="font-size: small;">Example: journal 2015 (finds the intersection of the two terms)</span>
+            </div>
+          </div>
+        </div>
 
-<!--====  End of Speakers  ====-->
+        <div class="bibtex_structure">
+          <div class="group year" extra="DESC number">
+            <a href="#top" style="display: inline"><em>(Top of the page)</em></a>
+            <div style="padding-bottom:10px;"></div>
+            <div class="sort journal" extra="DESC string">
+              <div class="templates"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="bibtex_display">
+
+          <div class="bibtex_template" style="display: none;">
+            <ul>
+              <li>
+
+                <span class="if url">
+                  <a class="bibtexVar publication-title" href="+URL+" target="_blank" extra="url">
+                    <span class="if title"><span class="title"></span>,</span>
+                  </a>
+                </span>
+                <span class="if !url">
+                  <div class="if doi">
+                    <a class="bibtexVar publication-title" href="http://dx.doi.org/+DOI+" target="_blank" extra="doi">
+                      <span class="if title"><span class="title"></span>,</span>
+                    </a>
+                  </div>
+                </span>
+
+                <!-- <span class="if title">
+                  <a class="bibtexVar" href="http://www.website.com/~demo/papers/+BIBTEXKEY+.pdf" extra="BIBTEXKEY">
+                    <span style="text-decoration: underline;" class="title"></span>,
+                  </a>
+                </span> -->
+                <div class="if author">
+                  <span class="author"></span>
+                </div>
+                <div>
+                  <span class="if url">
+                    <a class="bibtexVar" href="+URL+" target="_blank" extra="url">
+                      <span class="if journal"><em><span class="journal"></span></em>,</span>
+                      <span class="if !journal">
+                        <span class="if publisher"><em><span class="publisher"></span></em>,</span>
+                      </span>
+                    </a>
+                  </span>
+                  <span class="if !url">
+                    <span class="if doi">
+                      <a class="bibtexVar" href="http://dx.doi.org/+DOI+" target="_blank" extra="doi">
+                        <span class="if journal"><em><span class="journal"></span></em>,</span>
+                        <span class="if !journal">
+                          <span class="if publisher"><em><span class="publisher"></span></em>,</span>
+                        </span>
+                      </a>
+                    </span>
+                  </span>
+
+                  <span class="if booktitle">In <em><span class="booktitle"></span></em>,</span>
+                  <span class="if address"><span class="address"></span>,</span>
+                  <span class="if month"><span class="month"></span>,</span>
+                  <span class="if year"><span class="year"></span>.</span>
+                  <span class="if note"><span class="note"></span></span>
+                  <span class="if volume"><strong><span class="volume"></span></strong></span>
+                  <span class="if number">(<span class="number"></span>):</span>
+                  <span class="if pages"><span class="pages"></span>.</span>
+                  <a class="bibtexVar publication-buttons" role="button" data-toggle="collapse" href="#bib+BIBTEXKEY+" aria-expanded="false"
+                    aria-controls="bib+BIBTEXKEY+" extra="BIBTEXKEY" bibtexjs-css-escape>
+                    &nbsp;&nbsp;&nbsp;[BibTex]&nbsp;
+                  </a>
+                  <a class="bibtexVar publication-buttons" href="data/papers/+FILE+" target="_blank" aria-expanded="false" extra="file">
+                    [PDF]&nbsp;
+                  </a>
+                  <span class='if code'><a class="bibtexVar publication-buttons" role="button" href="+CODE+" extra="code"
+                      target="_blank">[Code]&nbsp;</a></span>
+                  <span class='if software'><a class="bibtexVar publication-buttons" role="button" href="+SOFTWARE+" extra="software"
+                      target="_blank">[Software]&nbsp;</a></span>
+                  <span class='if dataset'><a class="bibtexVar publication-buttons" role="button" href="+DATASET+" extra="dataset"
+                      target="_blank">[Dataset]</a></span>
+                </div>
+                <div class="bibtexVar collapse" id="bib+BIBTEXKEY+" extra="BIBTEXKEY">
+                  <div class="well" style="box-shadow: rgb(0 0 0 / 16%) 0px 10px 36px 0px, rgb(0 0 0 / 6%) 0px 0px 0px 1px; padding:5px;">
+                    <pre><span class="bibtexraw noread"></span></pre>
+                  </div>
+                </div>
+                <div style="display:none"><span class="bibtextype"></span></div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
 
 
 
-<!--============================
+
+
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!--====  End of Publications  ====-->
+
+
+
+  <!--============================
 =            Footer            =
 =============================-->
 
-<footer class="footer-main" style="padding: 30px;">
+  <footer class="footer-main" style="padding: 30px;">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="block text-center">
-			<img src="images/footer-logo.png" alt="logo" class="img-fluid">
+            <img src="images/footer-logo.png" alt="logo" class="img-fluid">
           </div>
         </div>
       </div>
     </div>
-</footer>
-<!-- Subfooter -->
-<footer class="subfooter">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 align-self-center">
-        <div class="copyright-text">
-          <p><a href="#">Yali Jia</a> &#169; 2021 All Right Reserved</p>
+  </footer>
+  <!-- Subfooter -->
+  <footer class="subfooter">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 align-self-center">
+          <div class="copyright-text">
+            <p><a href="#">Yali Jia</a> &#169; 2021 All Right Reserved</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <a href="#" class="to-top"><i class="fa fa-angle-up"></i></a>
         </div>
       </div>
-      <div class="col-md-6">
-          <a href="#" class="to-top"><i class="fa fa-angle-up"></i></a>
-      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 
   <!-- JAVASCRIPTS -->
   <!-- jQuey -->
-  <script src="plugins/jquery/jquery.js"></script>
+  <!-- <script src="plugins/jquery/jquery.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Popper js -->
   <script src="plugins/popper/popper.min.js"></script>
   <!-- Bootstrap 4 -->
   <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
   <!-- Smooth Scroll -->
-  <script src="plugins/smoothscroll/SmoothScroll.min.js"></script>  
+  <script src="plugins/smoothscroll/SmoothScroll.min.js"></script>
   <!-- Isotope -->
-  <script src="plugins/isotope/mixitup.min.js"></script>  
+  <script src="plugins/isotope/mixitup.min.js"></script>
   <!-- Magnific Popup -->
   <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
   <!-- Slick Carousel -->
-  <script src="plugins/slick/slick.min.js"></script>  
+  <script src="plugins/slick/slick.min.js"></script>
   <!-- SyoTimer -->
   <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
-  <!-- Google Mapl -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
-  <script type="text/javascript" src="plugins/google-map/gmap.js"></script>
   <!-- Custom Script -->
   <script src="js/custom.js"></script>
+  <script src="js/bibtex_js.js" charset="utf-8"></script>
+  <script src="js/publication-head.js" charset="utf-8"></script>
 </body>
 
 </html>

@@ -3651,4 +3651,18 @@ ul.pagination .active a {
   margin-bottom: 30px;
 }
 
+.publication-title{
+  color: #2f99f7;
+  font-weight: bold;
+  /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+.publication-buttons{
+  color: #c815ff;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.publication_items
+{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 /*# sourceMappingURL=maps/style.css.map */
