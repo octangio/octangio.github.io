@@ -148,27 +148,26 @@
     <div class="container">
       <div class="row">
         
-        <div class="container-fluid">
+        <div class="container-fluid" style="margin-bottom: 20px;">
           <div class="searchbar">
             <div style="float:left;">
-              <button type="button" class="btn btn-default" onclick="reset()">Reset</button>
+              <button type="button" class="btn btn-default" style="text-transform: none; width:70px; height: 40px; margin: 5px;" onclick="reset()">Reset</button>
             </div>
             <div style="float:left;">
-              <select id="authorselectfirst" class="btn bibtex_search bibtex_generate_author"
-                style="border: 1px solid lightgrey;" extra="first" search="author">
+              <select id="authorselectfirst" class="btn bibtex_search bibtex_generate_author control-forms"
+                style="border: 1px solid lightgrey; text-transform: none;" extra="first" search="author">
                 <option value="">Search First Author</option>
               </select>
             </div>
             <div style="float:left;">
-              <select id="authorselect" class="btn bibtex_search bibtex_generate_author"
-                style="border: 1px solid lightgrey;" search="author">
+              <select id="authorselect" class="btn bibtex_search bibtex_generate_author control-forms"
+                style="border: 1px solid lightgrey; text-transform: none;" search="author">
                 <option value="">Search Author</option>
               </select>
             </div>
 
             <div style="float:left;">
-              <input type="text" class="bibtex_search form-control" id="searchbar" placeholder="Search publications">
-              <span class="help-block" style="font-size: small;">Example: journal 2015 (finds the intersection of the two terms)</span>
+              <input type="text" class="bibtex_search form-control control-search" id="searchbar" placeholder="Search publications">
             </div>
           </div>
         </div>
