@@ -3710,4 +3710,22 @@ ul.pagination .active a {
     font-size: 14px;
   }
 }
+.mycustom-control 
+{
+  float: left;
+}
+@media (max-width: 500px) {
+  .mycustom-control 
+  {
+    float: none;
+  }
+  .control-search 
+  {
+    width: 100%;
+  }
+  .control-forms{
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=maps/style.css.map */
