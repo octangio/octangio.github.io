@@ -3728,4 +3728,17 @@ ul.pagination .active a {
   }
 }
 
+.bibtex-full-width {
+  width: 88vw;
+  /* position: relative; */
+  /*left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;*/
+  /* display: flex;  */
+  box-shadow: rgb(0 0 0 / 16%) 0px 10px 36px 0px, rgb(0 0 0 / 6%) 0px 0px 0px 1px;
+  padding: 5px;
+}
+
+
 /*# sourceMappingURL=maps/style.css.map */
