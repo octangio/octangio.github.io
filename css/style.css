@@ -1185,6 +1185,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .about .content-block .description-two {
+  font-size: 1.1625rem;
   margin-bottom: 30px;
 }
 
