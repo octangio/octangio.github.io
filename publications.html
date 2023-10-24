@@ -29,11 +29,9 @@
 
   <bibtex src="data/publications.bib"></bibtex>
 
-
-
   <style>
     h1 {
-      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       font-size: 50px;
     }
 
@@ -138,7 +136,7 @@
   <!--==============================
 =            Publications            =
 ===============================-->
-            <!-- <div style="float:left;">
+  <!-- <div style="float:left;">
               <select id="topicselect" class="btn bibtex_search" style="border: 1px solid lightgrey;">
                 <option value="">Search Topic</option>
                 <option value="OCT">OCT</option>
@@ -147,11 +145,12 @@
   <section class="section speakers white">
     <div class="container">
       <div class="row">
-        
+
         <div class="container-fluid" style="margin-bottom: 20px;">
           <div class="searchbar">
             <div class="mycustom-control">
-              <button type="button" class="btn btn-default" style="text-transform: none; width:70px; height: 40px; margin: 5px;" onclick="reset()">Reset</button>
+              <button type="button" class="btn btn-default"
+                style="text-transform: none; width:70px; height: 40px; margin: 5px;" onclick="reset()">Reset</button>
             </div>
             <div class="mycustom-control">
               <select id="authorselectfirst" class="btn bibtex_search bibtex_generate_author control-forms"
@@ -167,7 +166,8 @@
             </div>
 
             <div class="mycustom-control">
-              <input type="text" class="bibtex_search form-control control-search" id="searchbar" placeholder="Search publications">
+              <input type="text" class="bibtex_search form-control control-search" id="searchbar"
+                placeholder="Search publications">
             </div>
           </div>
         </div>
@@ -237,19 +237,20 @@
                   <span class="if volume"><strong><span class="volume"></span></strong></span>
                   <span class="if number">(<span class="number"></span>):</span>
                   <span class="if pages"><span class="pages"></span>.</span>
-                  <a class="bibtexVar publication-buttons" role="button" data-toggle="collapse" href="#bib+BIBTEXKEY+" aria-expanded="false"
-                    aria-controls="bib+BIBTEXKEY+" extra="BIBTEXKEY" bibtexjs-css-escape>
+                  <a class="bibtexVar publication-buttons" role="button" data-toggle="collapse" href="#bib+BIBTEXKEY+"
+                    aria-expanded="false" aria-controls="bib+BIBTEXKEY+" extra="BIBTEXKEY" bibtexjs-css-escape>
                     &nbsp;&nbsp;&nbsp;[BibTex]&nbsp;
                   </a>
-                  <a class="bibtexVar publication-buttons" href="data/papers/+FILE+" target="_blank" aria-expanded="false" extra="file">
+                  <a class="bibtexVar publication-buttons" href="data/papers/+FILE+" target="_blank"
+                    aria-expanded="false" extra="file">
                     [PDF]&nbsp;
                   </a>
-                  <span class='if code'><a class="bibtexVar publication-buttons" role="button" href="+CODE+" extra="code"
-                      target="_blank">[Code]&nbsp;</a></span>
-                  <span class='if software'><a class="bibtexVar publication-buttons" role="button" href="+SOFTWARE+" extra="software"
-                      target="_blank">[Software]&nbsp;</a></span>
-                  <span class='if dataset'><a class="bibtexVar publication-buttons" role="button" href="+DATASET+" extra="dataset"
-                      target="_blank">[Dataset]</a></span>
+                  <span class='if code'><a class="bibtexVar publication-buttons" role="button" href="+CODE+"
+                      extra="code" target="_blank">[Code]&nbsp;</a></span>
+                  <span class='if software'><a class="bibtexVar publication-buttons" role="button" href="+SOFTWARE+"
+                      extra="software" target="_blank">[Software]&nbsp;</a></span>
+                  <span class='if dataset'><a class="bibtexVar publication-buttons" role="button" href="+DATASET+"
+                      extra="dataset" target="_blank">[Dataset]</a></span>
                 </div>
                 <div class="bibtexVar collapse" id="bib+BIBTEXKEY+" extra="BIBTEXKEY">
                   <div class="well bibtex-full-width">
@@ -260,16 +261,7 @@
               </li>
             </ul>
           </div>
-
         </div>
-
-
-
-
-
-
-
-
       </div>
     </div>
   </section>
